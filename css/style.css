@@ -58,6 +58,7 @@
 .box{
     margin-bottom: 20px;
 }
+
 .product img{
     width: 200px;
 }
@@ -66,6 +67,3 @@
     margin: 15px;
 }
 
-.nav-link a:active{
-    color: white;
-}
