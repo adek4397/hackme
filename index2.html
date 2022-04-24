@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <style>
+        body{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nots{
+            width: 250px;
+            min-height: 250px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            float: left;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        .nots .title{
+            width: 100%;
+            /* height: 30px; */
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nots .email{
+            padding: 10px;
+        }
+
+        .nots .content{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+        const app = document.querySelector("#app");
+        
+        for(let i = 0; i<localStorage.length; i++){
+            var myAray = JSON.parse(localStorage.getItem(localStorage.key(i)));
+            app.innerHTML += '<div class="nots"><div class="title">'+localStorage.key(i)+'</div><div class="email">E-mail: <i>'+myAray[0]+'</i></div><div class="content"><i>'+myAray[1]+'</i></div></div>';
+        }
+    </script>
+</body>
+</html>
