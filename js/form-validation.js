@@ -26,4 +26,10 @@ button.addEventListener("click", function(){
       form.classList.add('was-validated')
     }, false)
   })
+  setTimeout(() => {
+    // temat.value = "";
+    // email.value = "";
+    // tresc.value = "";
+    location.reload(true);
+  }, 2000);
 })
