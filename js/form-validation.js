@@ -31,5 +31,5 @@ button.addEventListener("click", function(){
     // email.value = "";
     // tresc.value = "";
     location.reload(true);
-  }, 2000);
+  }, 1000);
 })
